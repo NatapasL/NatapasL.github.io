@@ -1,8 +1,10 @@
 import { createClient } from '@sanity/client';
 
+import { environments } from '@/configs/environments';
+
 export const client = createClient({
-  projectId: process.env.SANITY_PROJECT_ID,
-  dataset: process.env.SANITY_DATASET,
+  projectId: environments.SANITY_PROJECT_ID,
+  dataset: environments.SANITY_DATASET,
   useCdn: true,
-  apiVersion: process.env.SANITY_API_VERSION,
+  apiVersion: environments.SANITY_API_VERSION,
 });
