@@ -1,16 +1,11 @@
-# .github/workflows/deploy.yml
-
 name: Deploy Next.js to GitHub Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    branches: ['main']
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -26,19 +21,23 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20" # Use a Node.js version compatible with your project
+          node-version: '20'
           cache: 'npm'
 
       - name: Install Dependencies 📦
         run: npm install
 
       - name: Build Project 🏗️
-        run: npm run build # This command runs `next build` which creates the 'out' folder
+        env:
+          SANITY_PROJECT_ID: ${{ secrets.SANITY_PROJECT_ID }}
+          SANITY_API_VERSION: ${{ secrets.SANITY_API_VERSION }}
+          SANITY_DATASET: ${{ secrets.SANITY_DATASET }}
+        run: npm run build
 
       - name: Upload Artifact 📤
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './out' # The folder produced by the static export
+          path: './out'
 
       - name: Deploy to GitHub Pages 🚀
         id: deployment
