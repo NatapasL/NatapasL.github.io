@@ -1,5 +1,5 @@
 export const environments = {
-  GIT_URL: process.env.GIT_URL || '',
+  GITHUB_URL: process.env.GH_URL || '',
   LINKEDIN_URL: process.env.LINKEDIN_URL || '',
   EMAIL: process.env.EMAIL || '',
   SANITY_PROJECT_ID: process.env.SANITY_PROJECT_ID || '',
