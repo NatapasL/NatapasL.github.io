@@ -7,6 +7,7 @@ export const StyledHeaderBar = styled.div`
   display: flex;
   justify-content: center;
   background-color: ${COLORS.header.background};
+  height: 56px;
 
   .section {
     padding: 8px 16px;
