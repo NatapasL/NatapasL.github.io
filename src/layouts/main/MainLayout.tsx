@@ -12,7 +12,7 @@ export function LayoutMain({ children }: MainLayoutProps): JSX.Element {
       <main>
         <HeaderBar
           title="NatapasL"
-          githubUrl={environments.GITHUB_URL}
+          githubUrl={environments.GIT_URL}
           linkedinUrl={environments.LINKEDIN_URL}
           email={environments.EMAIL}
         />
