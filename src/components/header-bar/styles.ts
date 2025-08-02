@@ -6,6 +6,7 @@ import { FONT_SIZE } from '@/configs/fonts';
 export const StyledHeaderBar = styled.div`
   display: flex;
   justify-content: center;
+  background-color: ${COLORS.header.background};
 
   .section {
     padding: 8px 16px;
@@ -14,7 +15,6 @@ export const StyledHeaderBar = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: ${COLORS.header.background};
     color: ${COLORS.white};
   }
 
