@@ -14,7 +14,9 @@ export function HeaderBar({ title, githubUrl, linkedinUrl, email }: HeaderBarPro
   return (
     <StyledHeaderBar>
       <div className="section">
-        <div className="title">{title}</div>
+        <div className="title">
+          <Link href="/">{title}</Link>
+        </div>
 
         <div className="icon-container">
           <Link href={`mailto:${email}`} target="_blank">
