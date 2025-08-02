@@ -49,7 +49,7 @@ importers:
         specifier: ^5.5.3
         version: 5.5.3(eslint-config-prettier@8.10.2(eslint@9.32.0))(eslint@9.32.0)(prettier@3.6.2)
       typescript:
-        specifier: ^5.9.2
+        specifier: ^5.8.0
         version: 5.9.2
 
 packages:
