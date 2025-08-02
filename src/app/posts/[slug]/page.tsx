@@ -31,7 +31,6 @@ async function getPost(slug: string) {
 const ptComponents: Partial<PortableTextReactComponents> = {
   types: {
     code: ({ value }) => {
-      console.log(value);
       if (!value || !value.code) {
         return null;
       }
