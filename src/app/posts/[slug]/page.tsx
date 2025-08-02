@@ -1,21 +1,20 @@
 import { PageProps } from '.next/types/app/layout';
+import type { PortableTextReactComponents } from '@portabletext/react';
+import { PortableText } from '@portabletext/react';
+import { JSX } from 'react';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { client } from 'src/lib/sanityClient';
 
-async function getPosts() {
-  return [{ slug: 'learn-nextjs' }, { slug: 'static-generation' }];
-}
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
+  const query = `*[_type == "post"]{
+    "slug": slug.current
+  }`;
 
-async function getPostContent(slug: string) {
-  if (slug === 'learn-nextjs') {
-    return { title: 'How to Learn Next.js' };
-  }
-  return { title: 'Understanding Static Generation' };
-}
+  const slugs: { slug: string }[] = await client.fetch(query);
 
-export async function generateStaticParams() {
-  const posts = await getPosts();
-
-  return posts.map(post => ({
-    slug: post.slug,
+  return slugs.map(({ slug }) => ({
+    slug,
   }));
 }
 
@@ -23,14 +22,38 @@ interface PostPageProps extends PageProps {
   params: Promise<{ slug: string }>;
 }
 
-export default async function PostPage({ params }: PostPageProps) {
+async function getPost(slug: string) {
+  const query = `*[_type == "post" && slug.current == $slug][0]{ title, body }`;
+  const post = await client.fetch(query, { slug });
+  return post;
+}
+
+const ptComponents: Partial<PortableTextReactComponents> = {
+  types: {
+    code: ({ value }) => {
+      console.log(value);
+      if (!value || !value.code) {
+        return null;
+      }
+      return (
+        <SyntaxHighlighter style={atomDark} language={value.language || 'text'} showLineNumbers>
+          {value.code}
+        </SyntaxHighlighter>
+      );
+    },
+  },
+};
+
+export default async function PostPage({ params }: PostPageProps): Promise<JSX.Element> {
   const slug = (await params).slug;
-  const post = await getPostContent(slug);
+  const post = await getPost(slug);
 
   return (
     <article>
       <h1>{post.title}</h1>
-      {/* Post content goes here... */}
+      <div className="prose">
+        <PortableText value={post.body} components={ptComponents} />
+      </div>
     </article>
   );
 }
