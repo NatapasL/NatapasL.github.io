@@ -4,7 +4,10 @@ export const StyledHomeScreen = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 16px 4px;
+
+  @media screen and (min-width: 1024px) {
+    padding: 16px 4px;
+  }
 
   .post-list {
     width: 100%;

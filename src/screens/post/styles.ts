@@ -4,7 +4,10 @@ export const StyledPostScreen = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 16px 4px;
+
+  @media screen and (min-width: 1024px) {
+    padding: 16px 4px;
+  }
 `;
 
 export const StyledContent = styled.div`

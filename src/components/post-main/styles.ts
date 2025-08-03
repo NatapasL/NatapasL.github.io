@@ -5,6 +5,8 @@ import { COLORS } from '@/configs/colors';
 import { FONT_SIZE } from '@/configs/fonts';
 
 export const StyledPostMain = styled.div`
+  padding: 12px 8px;
+
   @media screen and (min-width: 1024px) {
     padding: 32px 64px;
   }
@@ -16,6 +18,7 @@ export const StyledPostMain = styled.div`
   .body-container {
     display: flex;
     flex-direction: column;
+    row-gap: 12px;
 
     @media screen and (min-width: 1024px) {
       row-gap: 16px;
@@ -39,7 +42,7 @@ export const StyledPostMain = styled.div`
 export const StyledCodeComponent = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: calc(100vw - 8px);
+  max-width: calc(100vw - 24px);
 
   @media screen and (min-width: 1024px) {
     max-width: calc(100vw - 454px);
