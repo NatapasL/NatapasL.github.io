@@ -20,13 +20,19 @@ export function HeaderBar({ title, githubUrl, linkedinUrl, email }: HeaderBarPro
 
         <div className="icon-container">
           <Link href={`mailto:${email}`} target="_blank">
-            <FontAwesomeIcon icon={faEnvelope} size="2x" />
+            <div className="email-icon-container">
+              <FontAwesomeIcon icon={faEnvelope} size="2x" />
+            </div>
           </Link>
           <Link href={githubUrl} target="_blank">
-            <FontAwesomeIcon icon={faGithubSquare} size="2x" />
+            <div className="github-icon-container">
+              <FontAwesomeIcon icon={faGithubSquare} size="2x" />
+            </div>
           </Link>
           <Link href={linkedinUrl} target="_blank">
-            <FontAwesomeIcon icon={faLinkedin} size="2x" />
+            <div className="linkedin-icon-container">
+              <FontAwesomeIcon icon={faLinkedin} size="2x" />
+            </div>
           </Link>
         </div>
       </div>

@@ -10,13 +10,17 @@ export const StyledHeaderBar = styled.div`
   height: 56px;
 
   .section {
-    padding: 8px 16px;
+    padding: 4px 8px;
     width: 100%;
     max-width: 1348px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: ${COLORS.white};
+
+    @media screen and (min-width: 1024px) {
+      padding: 8px 16px;
+    }
   }
 
   .title {
@@ -24,7 +28,27 @@ export const StyledHeaderBar = styled.div`
   }
 
   .icon-container {
-    display: grid;
-    grid-template-columns: 44px 40px 40px;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+  }
+
+  .email-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 24px;
+    overflow: hidden;
+  }
+
+  .github-icon-container,
+  .linkedin-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
   }
 `;
