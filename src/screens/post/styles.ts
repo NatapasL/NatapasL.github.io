@@ -1,17 +1,10 @@
 import styled from 'styled-components';
 
-export const StyledHomeScreen = styled.div`
+export const StyledPostScreen = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding: 16px 4px;
-
-  .post-list {
-    width: 100%;
-    row-gap: 8px;
-    display: flex;
-    flex-direction: column;
-  }
 `;
 
 export const StyledContent = styled.div`
@@ -19,8 +12,4 @@ export const StyledContent = styled.div`
   flex-direction: row;
   justify-content: center;
   column-gap: 16px;
-`;
-
-export const StyledCategoryTitle = styled.h3`
-  margin-bottom: 12px;
 `;

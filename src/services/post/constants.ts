@@ -20,3 +20,17 @@ export const GET_POSTS_BY_CATEGORY_QUERY = `
     "authorName": author->name,
     excerpt,
   }`;
+
+export const GET_POST_BY_SLUG_QUERY = `*[_type == "post" && slug.current == $slug][0]{
+  title,
+  "slug": slug.current,
+  publishedAt,
+  "categories": categories[]->title,
+  "imageUrl": mainImage.asset->url,
+  "authorName": author->name,
+  body
+  }`;
+
+export const GET_POST_SLUGS_QUERY = `*[_type == "post"]{
+    "slug": slug.current
+  }`;
