@@ -18,8 +18,6 @@ const portableTextComponents: Partial<PortableTextReactComponents> = {
 };
 
 export function PostMain({ post }: PostMainProps): JSX.Element {
-  console.log(post);
-
   return (
     <Card>
       <StyledPostMain>
