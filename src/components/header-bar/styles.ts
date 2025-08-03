@@ -33,6 +33,17 @@ export const StyledHeaderBar = styled.div`
     column-gap: 8px;
   }
 
+  .email-icon-container,
+  .github-icon-container,
+  .linkedin-icon-container {
+    svg,
+    path {
+      &:hover {
+        color: ${COLORS.link.hoverLight};
+      }
+    }
+  }
+
   .email-icon-container {
     display: flex;
     justify-content: center;

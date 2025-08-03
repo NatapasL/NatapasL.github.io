@@ -20,5 +20,6 @@ export const COLORS = {
   },
   link: {
     hover: 'var(--link-hover)',
+    hoverLight: 'var(--link-hover-light)',
   },
 };
