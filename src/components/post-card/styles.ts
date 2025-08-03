@@ -43,16 +43,10 @@ export const StyledPostCard = styled.div`
   }
 
   .category-list-container {
-    margin-top: 24px;
+    margin-top: 8px;
     display: flex;
     column-gap: 8px;
     flex-wrap: wrap;
-  }
-
-  .category {
-    font-size: ${FONT_SIZE.sm};
-    color: ${COLORS.text.gray[1]};
-    cursor: pointer;
   }
 
   .published-date {
