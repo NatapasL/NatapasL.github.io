@@ -2,7 +2,9 @@ import { JSX } from 'react';
 
 import StyledComponentsRegistry from '@/lib/registry';
 
-import { StickyHeaderBar } from './StickyHeaderBar';
+import { HeaderBar } from '@/components/header-bar/HeaderBar';
+import { environments } from '@/configs/environments';
+import { headerBarContainerStyles } from './styles';
 
 import type { MainLayoutProps } from './types';
 
@@ -10,7 +12,14 @@ export function LayoutMain({ children }: MainLayoutProps): JSX.Element {
   return (
     <StyledComponentsRegistry>
       <main>
-        <StickyHeaderBar />
+        <div style={headerBarContainerStyles}>
+          <HeaderBar
+            title="NatapasL"
+            githubUrl={environments.GITHUB_URL}
+            linkedinUrl={environments.LINKEDIN_URL}
+            email={environments.EMAIL}
+          />
+        </div>
         {children}
       </main>
     </StyledComponentsRegistry>
