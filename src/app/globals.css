@@ -16,6 +16,8 @@
 
   --link-hover: #2f3ab2;
 
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
   --font-size-md: 16px;
   --font-size-lg: 24px;
 }
@@ -51,5 +53,13 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 20px;
 }
