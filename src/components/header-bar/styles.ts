@@ -12,7 +12,7 @@ export const StyledHeaderBar = styled.div`
   .section {
     padding: 4px 8px;
     width: 100%;
-    max-width: 1348px;
+    max-width: 1136px;
     display: flex;
     justify-content: space-between;
     align-items: center;
