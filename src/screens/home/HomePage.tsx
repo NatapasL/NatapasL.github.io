@@ -3,10 +3,10 @@
 import { JSX } from 'react';
 
 import { CategoryListCard } from '@/components/category-list-card/CategoryListCard';
+import { ContentContainer } from '@/components/content-container/ContentContainer';
 import { PostCard } from '@/components/post-card/PostCard';
 import { StyledHomePage } from './styles';
 
-import { ContentContainer } from '@/components/content-container/ContentContainer';
 import type { HomePageProps } from './types';
 
 export function HomePage({ posts, categories }: HomePageProps): JSX.Element {
