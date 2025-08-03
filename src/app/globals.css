@@ -1,4 +1,6 @@
 :root {
+  overscroll-behavior: none;
+
   --white: #fff;
   --black: #000;
 
@@ -26,6 +28,7 @@
 html,
 body {
   max-width: 100vw;
+  overscroll-behavior: none;
 }
 
 body {
