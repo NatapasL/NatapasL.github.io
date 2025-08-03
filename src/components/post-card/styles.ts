@@ -15,7 +15,7 @@ export const StyledPostCard = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 240px;
     overflow: hidden;
   }
 
