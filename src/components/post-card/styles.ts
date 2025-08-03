@@ -6,12 +6,8 @@ import { FONT_SIZE } from '@/configs/fonts';
 export const StyledPostCard = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: ${COLORS.content.background};
   align-items: center;
   width: 100%;
-  box-shadow: rgba(23, 23, 23, 0.03) 0px 0px 0px 1px;
-  border-radius: 4px;
-  overflow: hidden;
 
   .image-container {
     position: relative;
