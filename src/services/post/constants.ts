@@ -10,7 +10,7 @@ export const GET_POSTS_QUERY = `*[_type == "post"] | order(publishedAt desc) {
   }`;
 
 export const GET_POSTS_BY_CATEGORY_QUERY = `
-*[_type == "post" && references(*[_type == "category" && title == $categoryTitle]._id)]{
+*[_type == "post" && references(*[_type == "category" && title == $categoryTitle]._id)] | order(publishedAt desc) {
     _id,
     title,
     "slug": slug.current,
