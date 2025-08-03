@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { JSX } from 'react';
 
 import { Card } from '@/components/card/Card';
+import { CategoryTag } from '@/components/category-tag/CategoryTag';
 import { Link } from '@/components/link/Link';
 import { ROUTES } from '@/constants/routes';
 import { StyledPostCard } from './styles';
@@ -32,9 +33,7 @@ export function PostCard({ post }: PostCardProps): JSX.Element {
 
           <div className="category-list-container">
             {post.categories?.map(category => (
-              <div key={category} className="category">
-                #{category}
-              </div>
+              <CategoryTag key={category} title={category} />
             ))}
           </div>
         </div>

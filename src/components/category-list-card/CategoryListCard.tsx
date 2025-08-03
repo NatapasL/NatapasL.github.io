@@ -1,8 +1,7 @@
 import { JSX } from 'react';
 
 import { Card } from '@/components/card/Card';
-import { Link } from '@/components/link/Link';
-import { ROUTES } from '@/constants/routes';
+import { CategoryTag } from '@/components/category-tag/CategoryTag';
 import { StyledCategoryListCard } from './styles';
 
 import type { CategoryListCardProps } from './types';
@@ -14,11 +13,7 @@ export function CategoryListCard({ categories }: CategoryListCardProps): JSX.Ele
         <h4>Categories</h4>
         <div className="list-container">
           {categories.map(category => (
-            <div key={category._id} className="category">
-              <Link href={ROUTES.category(category.title)}>
-                #{category.title} ({category.postCount})
-              </Link>
-            </div>
+            <CategoryTag key={category._id} title={category.title} count={category.postCount} />
           ))}
         </div>
       </StyledCategoryListCard>
