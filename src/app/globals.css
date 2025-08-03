@@ -57,20 +57,37 @@ h4,
 h5,
 h6 {
   font-family: var(--font-ibm-plex-sans-thai);
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 35px;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 48px;
+  }
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 25px;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 30px;
+  }
 }
 
 h3 {
-  font-size: 25px;
+  font-size: 20px;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 25px;
+  }
 }
 
 h4 {
-  font-size: 20px;
+  font-size: 18px;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 20px;
+  }
 }
