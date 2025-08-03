@@ -3,16 +3,19 @@ import { IBM_Plex_Sans_Thai_Looped, Prompt, Sarabun } from 'next/font/google';
 const sarabun = Sarabun({
   variable: '--font-sarabun',
   weight: ['100', '200', '300', '400', '500', '600', '700'],
+  subsets: ['latin', 'thai', 'latin-ext'],
 });
 
 const ibmPlexSansThaiLooped = IBM_Plex_Sans_Thai_Looped({
   variable: '--font-ibm-plex-sans-thai',
   weight: ['100', '200', '300', '400', '500', '600', '700'],
+  subsets: ['latin', 'thai', 'latin-ext'],
 });
 
 const prompt = Prompt({
   variable: '--font-prompt',
   weight: ['100', '200', '300', '400', '500', '600', '700'],
+  subsets: ['latin', 'thai', 'latin-ext'],
 });
 
 export const fontClasses = [sarabun, ibmPlexSansThaiLooped, prompt].map(font => font.variable).join(' ');
