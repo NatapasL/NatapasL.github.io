@@ -52,7 +52,6 @@ export const StyledPostCard = styled.div`
   .published-date {
     font-size: ${FONT_SIZE.xs};
     color: ${COLORS.text.gray[3]};
-    text-align: right;
   }
 
   @media screen and (min-width: 1024px) {
