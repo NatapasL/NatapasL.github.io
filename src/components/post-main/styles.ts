@@ -35,7 +35,7 @@ export const StyledPostMain = styled.div`
   }
 `;
 
-export const StyledCodeContainer = styled.div`
+export const StyledCodeComponent = styled.div`
   display: flex;
   flex-direction: column;
   max-width: calc(100vw - 8px);
