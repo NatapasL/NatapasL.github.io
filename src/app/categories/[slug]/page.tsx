@@ -1,7 +1,9 @@
+import 'server-only';
+
 import { JSX } from 'react';
 
 import { HomeScreen } from '@/screens/home/HomeScreen';
-import { getCategoriesWithPostCount, getCategoryTitles } from '@/services/category.ts/category-service';
+import { getCategoriesWithPostCount, getCategoryTitles } from '@/services/category/category-service';
 import { getPostsByCategory } from '@/services/post/post-service';
 
 import type { CategoryListPageProps } from './types';
