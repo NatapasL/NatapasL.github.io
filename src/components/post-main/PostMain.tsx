@@ -5,6 +5,7 @@ import { JSX } from 'react';
 import { Card } from '@/components/card/Card';
 import { CategoryTag } from '@/components/category-tag/CategoryTag';
 import { CodeComponent } from './CodeComponent';
+import { ImageComponent } from './ImageComponent';
 import { StyledPostMain } from './styles';
 
 import type { PostMainProps } from './types';
@@ -12,6 +13,7 @@ import type { PostMainProps } from './types';
 const portableTextComponents: Partial<PortableTextReactComponents> = {
   types: {
     code: CodeComponent,
+    image: ImageComponent,
   },
 };
 

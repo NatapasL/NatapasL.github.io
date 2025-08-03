@@ -1,3 +1,4 @@
+import { CSSProperties } from 'react';
 import styled from 'styled-components';
 
 import { COLORS } from '@/configs/colors';
@@ -44,3 +45,18 @@ export const StyledCodeComponent = styled.div`
     max-width: calc(100vw - 454px);
   }
 `;
+
+export const StyledImageComponent = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 360px;
+  overflow: hidden;
+`;
+
+export const imageStyles: CSSProperties = {
+  maxWidth: '100%',
+  maxHeight: '100%',
+  objectFit: 'contain',
+};

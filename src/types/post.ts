@@ -19,7 +19,7 @@ export interface Post {
   imageUrl?: string;
   authorName?: string;
   categories?: string[];
-  body?: (PostBodyCode | PostBodyBlock)[];
+  body?: (PostBodyCode | PostBodyBlock | PostBodyImage)[];
 }
 
 export interface PostBodyCode extends TypedObject {
@@ -32,6 +32,20 @@ export interface PostBodyBlock extends TypedObject {
   _type: 'block';
   children?: TypedObject[];
   style?: string;
+}
+
+export interface PostBodyImage extends TypedObject {
+  _type: 'image';
+  asset?: {
+    _type: 'reference';
+    _ref: string;
+  };
+  alt?: string;
+  dimensions: {
+    aspectRatio: number;
+    height: number;
+    width: number;
+  };
 }
 
 export interface PostSlug {

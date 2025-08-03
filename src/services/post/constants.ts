@@ -28,8 +28,13 @@ export const GET_POST_BY_SLUG_QUERY = `*[_type == "post" && slug.current == $slu
   "categories": categories[]->title,
   "imageUrl": mainImage.asset->url,
   "authorName": author->name,
-  body
-  }`;
+  body[]{
+    ...,
+    _type == "image" => {
+      "dimensions": asset->metadata.dimensions
+    }
+  }
+}`;
 
 export const GET_POST_SLUGS_QUERY = `*[_type == "post"]{
     "slug": slug.current
