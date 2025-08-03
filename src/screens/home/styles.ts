@@ -8,25 +8,30 @@ export const StyledHomePage = styled.div`
   justify-content: center;
   font-size: ${FONT_SIZE.lg};
   padding: 16px 4px;
-  column-gap: 16px;
 
-  .post-list {
-    width: 100%;
-    max-width: 1024px;
-    row-gap: 8px;
+  & > .content-container {
     display: flex;
-    flex-direction: column;
-  }
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 16px;
 
-  .category-list {
-    display: none;
-    width: 260px;
+    & > .post-list {
+      width: 100%;
+      row-gap: 8px;
+      display: flex;
+      flex-direction: column;
+    }
 
-    @media screen and (min-width: 1024px) {
-      display: block;
-      position: sticky;
-      top: 72px;
-      height: fit-content;
+    & > .category-list {
+      display: none;
+      width: 260px;
+
+      @media screen and (min-width: 1024px) {
+        display: block;
+        position: sticky;
+        top: 72px;
+        height: fit-content;
+      }
     }
   }
 `;
