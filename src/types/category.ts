@@ -3,3 +3,7 @@ export interface CategoryWithCount {
   title: string;
   postCount: number;
 }
+
+export interface CategoryTitle {
+  title: string;
+}

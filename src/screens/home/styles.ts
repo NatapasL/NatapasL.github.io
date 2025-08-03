@@ -9,29 +9,33 @@ export const StyledHomePage = styled.div`
   font-size: ${FONT_SIZE.lg};
   padding: 16px 4px;
 
-  & > .content-container {
+  .post-list {
+    width: 100%;
+    row-gap: 8px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    column-gap: 16px;
+    flex-direction: column;
+  }
 
-    & > .post-list {
-      width: 100%;
-      row-gap: 8px;
-      display: flex;
-      flex-direction: column;
-    }
+  .category-list {
+    display: none;
+    width: 320px;
 
-    & > .category-list {
-      display: none;
-      width: 320px;
-
-      @media screen and (min-width: 1024px) {
-        display: block;
-        position: sticky;
-        top: 72px;
-        height: fit-content;
-      }
+    @media screen and (min-width: 1024px) {
+      display: block;
+      position: sticky;
+      top: 72px;
+      height: fit-content;
     }
   }
+`;
+
+export const StyledContent = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 16px;
+`;
+
+export const StyledCategoryTitle = styled.h3`
+  margin-bottom: 12px;
 `;

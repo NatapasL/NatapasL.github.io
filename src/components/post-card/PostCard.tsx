@@ -4,11 +4,14 @@ import { JSX } from 'react';
 
 import { Card } from '@/components/card/Card';
 import { Link } from '@/components/link/Link';
+import { ROUTES } from '@/constants/routes';
 import { StyledPostCard } from './styles';
 
 import type { PostCardProps } from './types';
 
 export function PostCard({ post }: PostCardProps): JSX.Element {
+  const postUrl = ROUTES.post(post.slug || '');
+
   return (
     <Card>
       <StyledPostCard>
@@ -19,12 +22,12 @@ export function PostCard({ post }: PostCardProps): JSX.Element {
         )}
         <div className="content-container">
           <div className="published-date">{dayjs(post.publishedAt).format('MMM DD, YYYY')}</div>
-          <Link href={`/posts/${post.slug}`}>
+          <Link href={postUrl}>
             <h2>{post.title}</h2>
           </Link>
           <div className="excerpt-container">{post.excerpt}</div>
           <span className="read-more">
-            <Link href={`/posts/${post.slug}`}>Read more</Link>
+            <Link href={postUrl}>Read more</Link>
           </span>
 
           <div className="category-list-container">
