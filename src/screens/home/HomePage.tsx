@@ -1,29 +1,17 @@
 'use client';
 
-import { JSX, useEffect } from 'react';
-import { useImmer } from 'use-immer';
+import { JSX } from 'react';
 
 import { PostCard } from '@/components/post-card/PostCard';
-import { getPosts } from '@/services/post/post';
 import { StyledHomePage } from './styles';
 
-import type { PostListItem } from '@/types/post';
+import type { HomePageProps } from './types';
 
-export function HomePage(): JSX.Element {
-  const [posts, setPosts] = useImmer<PostListItem[] | undefined>(undefined);
-
-  useEffect(() => {
-    fetchPosts();
-  }, []);
-
-  async function fetchPosts(): Promise<void> {
-    setPosts(await getPosts());
-  }
-
+export function HomePage({ posts }: HomePageProps): JSX.Element {
   return (
     <StyledHomePage>
       <div className="post-list">
-        {posts?.map(post => (
+        {posts.map(post => (
           <PostCard key={post._id} post={post} />
         ))}
       </div>
