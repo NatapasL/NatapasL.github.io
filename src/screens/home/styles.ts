@@ -24,7 +24,7 @@ export const StyledHomePage = styled.div`
 
     & > .category-list {
       display: none;
-      width: 260px;
+      width: 320px;
 
       @media screen and (min-width: 1024px) {
         display: block;
