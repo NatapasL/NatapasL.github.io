@@ -26,7 +26,7 @@ export function PostMain({ post }: PostMainProps): JSX.Element {
       <StyledPostMain>
         {post.imageUrl && (
           <div className="main-image-container">
-            <Image src={post.imageUrl} alt={post.title || ''} fill objectFit="cover" />
+            <Image src={post.imageUrl} alt={post.title || ''} fill objectFit="cover" loading="lazy" />
           </div>
         )}
 

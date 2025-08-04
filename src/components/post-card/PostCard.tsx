@@ -19,7 +19,7 @@ export function PostCard({ post }: PostCardProps): JSX.Element {
       <StyledPostCard>
         {imageUrl && (
           <div className="image-container">
-            <Image src={imageUrl} alt={post.title || ''} fill style={{ objectFit: 'cover' }} />
+            <Image src={imageUrl} alt={post.title || ''} fill style={{ objectFit: 'cover' }} loading="lazy" />
           </div>
         )}
         <div className="content-container">
