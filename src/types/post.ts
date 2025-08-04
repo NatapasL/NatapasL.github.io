@@ -20,6 +20,7 @@ export interface Post {
   authorName?: string;
   categories?: string[];
   body?: (PostBodyCode | PostBodyBlock | PostBodyImage)[];
+  excerpt?: string;
 }
 
 export interface PostBodyCode extends TypedObject {

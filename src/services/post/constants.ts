@@ -33,7 +33,8 @@ export const GET_POST_BY_SLUG_QUERY = `*[_type == "post" && slug.current == $slu
     _type == "image" => {
       "dimensions": asset->metadata.dimensions
     }
-  }
+  },
+  excerpt
 }`;
 
 export const GET_POST_SLUGS_QUERY = `*[_type == "post"]{
