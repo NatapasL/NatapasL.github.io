@@ -6,6 +6,7 @@ export interface PostListItem {
   slug?: string;
   publishedAt?: string;
   imageUrl?: string;
+  thumbnailUrl?: string;
   authorName?: string;
   categories?: string[];
   excerpt?: string;

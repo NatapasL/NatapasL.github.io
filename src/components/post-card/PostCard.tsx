@@ -12,13 +12,14 @@ import type { PostCardProps } from './types';
 
 export function PostCard({ post }: PostCardProps): JSX.Element {
   const postUrl = ROUTES.post(post.slug || '');
+  const imageUrl = post.thumbnailUrl || post.imageUrl;
 
   return (
     <Card>
       <StyledPostCard>
-        {post.imageUrl && (
+        {imageUrl && (
           <div className="image-container">
-            <Image src={post.imageUrl} alt={post.title || ''} fill style={{ objectFit: 'cover' }} />
+            <Image src={imageUrl} alt={post.title || ''} fill style={{ objectFit: 'cover' }} />
           </div>
         )}
         <div className="content-container">

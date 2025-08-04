@@ -5,6 +5,7 @@ export const GET_POSTS_QUERY = `*[_type == "post"] | order(publishedAt desc) {
     publishedAt,
     "categories": categories[]->title,
     "imageUrl": mainImage.asset->url,
+    "thumbnailUrl": thumbnailImage.asset->url,
     "authorName": author->name,
     excerpt,
   }`;
@@ -17,6 +18,7 @@ export const GET_POSTS_BY_CATEGORY_QUERY = `
     publishedAt,
     "categories": categories[]->title,
     "imageUrl": mainImage.asset->url,
+    "thumbnailUrl": thumbnailImage.asset->url,
     "authorName": author->name,
     excerpt,
   }`;
