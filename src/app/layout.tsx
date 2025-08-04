@@ -3,7 +3,7 @@ import { TemplateString } from 'next/dist/lib/metadata/types/metadata-types';
 import { JSX } from 'react';
 
 import { fontClasses } from '@/configs/fonts';
-import { TITLE } from '@/constants/meatadata';
+import { JSON_LD, TITLE } from '@/constants/meatadata';
 import { LayoutMain } from '@/layouts/main/MainLayout';
 import { getCategoriesWithPostCount } from '@/services/category/category-service';
 
@@ -35,6 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={fontClasses}>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
         <LayoutMain>{children}</LayoutMain>
       </body>
     </html>
