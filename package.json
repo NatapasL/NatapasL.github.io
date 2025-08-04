@@ -19,6 +19,7 @@
     "@sanity/image-url": "^1.1.0",
     "dayjs": "^1.11.13",
     "immer": "^10.1.1",
+    "mermaid": "^11.9.0",
     "next": "15.4.5",
     "react": "19.1.0",
     "react-dom": "19.1.0",

@@ -1,4 +1,4 @@
-import type { Post, PostBodyCode, PostBodyImage } from '@/types/post';
+import type { Post, PostBodyCode, PostBodyImage, PostBodyMermaid } from '@/types/post';
 
 export interface PostMainProps {
   post: Post;
@@ -10,4 +10,8 @@ export interface CodeComponentProps {
 
 export interface ImageComponentProps {
   value: PostBodyImage | undefined;
+}
+
+export interface MermaidComponentProps {
+  value: PostBodyMermaid | undefined;
 }

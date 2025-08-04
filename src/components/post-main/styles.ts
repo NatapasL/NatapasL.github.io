@@ -5,7 +5,9 @@ import { COLORS } from '@/configs/colors';
 import { FONT_SIZE } from '@/configs/fonts';
 
 export const StyledPostMain = styled.div`
+  width: 100%;
   padding: 12px 8px;
+  min-height: calc(100vh - 56px);
 
   @media screen and (min-width: 1024px) {
     padding: 32px 64px;
@@ -19,6 +21,7 @@ export const StyledPostMain = styled.div`
     display: flex;
     flex-direction: column;
     row-gap: 12px;
+    width: 100%;
 
     @media screen and (min-width: 1024px) {
       row-gap: 16px;
@@ -63,3 +66,14 @@ export const imageStyles: CSSProperties = {
   maxHeight: '100%',
   objectFit: 'contain',
 };
+
+export const StyledMermaidComponent = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  & > .mermaid {
+    width: 100%;
+    max-width: 700px;
+  }
+`;

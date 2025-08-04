@@ -19,7 +19,7 @@ export interface Post {
   imageUrl?: string;
   authorName?: string;
   categories?: string[];
-  body?: (PostBodyCode | PostBodyBlock | PostBodyImage)[];
+  body?: (PostBodyCode | PostBodyBlock | PostBodyImage | PostBodyMermaid)[];
   excerpt?: string;
 }
 
@@ -47,6 +47,11 @@ export interface PostBodyImage extends TypedObject {
     height: number;
     width: number;
   };
+}
+
+export interface PostBodyMermaid extends TypedObject {
+  _type: 'mermaid';
+  code?: string;
 }
 
 export interface PostSlug {
