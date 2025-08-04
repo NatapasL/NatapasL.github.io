@@ -6,18 +6,21 @@ import { FONT_SIZE } from '@/configs/fonts';
 
 export const StyledPostMain = styled.div`
   width: 100%;
-  padding: 12px 8px;
   min-height: calc(100vh - 56px);
 
-  @media screen and (min-width: 1024px) {
-    padding: 32px 64px;
+  .content-container {
+    padding: 12px 8px;
+
+    @media screen and (min-width: 1024px) {
+      padding: 32px 64px;
+    }
   }
 
   .title {
     margin-bottom: 16px;
   }
 
-  .body-container {
+  .post-body {
     display: flex;
     flex-direction: column;
     row-gap: 12px;
@@ -39,6 +42,16 @@ export const StyledPostMain = styled.div`
     font-size: ${FONT_SIZE.xs};
     color: ${COLORS.text.gray[3]};
     margin-bottom: 32px;
+  }
+
+  .main-image-container {
+    width: 100%;
+    height: 268px;
+    position: relative;
+
+    @media screen and (min-width: 1024px) {
+      height: 368px;
+    }
   }
 `;
 
