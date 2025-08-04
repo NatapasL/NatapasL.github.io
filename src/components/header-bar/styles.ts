@@ -8,7 +8,7 @@ export const StyledHeaderBar = styled.div`
   justify-content: center;
   background-color: ${COLORS.header.background};
   height: 56px;
-  box-shadow: rgba(23, 23, 23, 0.5) 0px 1px 0px 0px;
+  box-shadow: rgba(23, 23, 23, 0.03) 0px 1px 0px 0px;
 
   .section {
     padding: 4px 8px;
